@@ -8,6 +8,12 @@ eg：
 libqcef1无法安装之类的
 
 或者libqcef已过期或者被其他软件替代之类的，
+如果你尝试安装libqcef会提示:
+> Package libqcef is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+
 `sudo apt-get -f install`
 是不行的，因为修复不了，它只会把网易云也卸载了。
 毕竟确实是软件源里没有这个包即使换了testing的源也是找不到，
