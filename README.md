@@ -26,7 +26,9 @@ sudo apt install devscripts equivs git
 ```
 
 2. 克隆此仓库并进入文件夹:
-```git clone https://github.com/linuxdeepin/qcef.git && cd qcef```
+```
+git clone https://github.com/hoyho/qcef-for-debian-netease-music.git && cd qcef
+```
 
 
 3. 确保没有以前的建立的虚拟包生成并安装一个依赖于所需包的虚拟包:
@@ -37,15 +39,18 @@ $ mk-build-deps -s sudo -i
 
 4. 建立一个完整的 libqcef1 Debian 软件包
 
-`SUDO dpkg-buildpackage -uc -us -b -j$(nproc)`
+`sudo dpkg-buildpackage -uc -us -b -j$(nproc)`
 
 5. 安装并清理现场
 ```
 $ sudo apt install $(pwd)/../libqcef1_*.deb
 $ rm ../*qcef* 2> /dev/null
 ```
+
 6.安装你的deb包
-`sudo dpkg -i neteasexxxxxxx.deb`
+```
+sudo dpkg -i neteasexxxxxxx.deb
+```
 
 7. enjoy!
 
